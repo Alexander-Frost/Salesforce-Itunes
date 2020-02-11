@@ -125,9 +125,9 @@
 				FAAA7D4B23F309430017278E /* SceneDelegate.swift */,
 				FAAA7D9523F324BB0017278E /* Extensions.swift */,
 				FAAA7D8B23F31BB40017278E /* Core Data */,
-				FAAA7D8623F30ADE0017278E /* View Controllers */,
-				FAAA7D8323F309D00017278E /* Model Controllers */,
 				FAAA7D7E23F309770017278E /* Models */,
+				FAAA7D8323F309D00017278E /* Model Controllers */,
+				FAAA7D8623F30ADE0017278E /* View Controllers */,
 				FAAA7D4F23F309430017278E /* Main.storyboard */,
 				FAAA7D5523F309450017278E /* Assets.xcassets */,
 				FAAA7D5723F309450017278E /* LaunchScreen.storyboard */,
@@ -175,8 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				FAAA7D8423F30AD90017278E /* SearchTableViewController.swift */,
-				FAAA7D8723F30AF00017278E /* SavedMoviesTableViewController.swift */,
 				FAAA7D8923F30B020017278E /* DetailViewController.swift */,
+				FAAA7D8723F30AF00017278E /* SavedMoviesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

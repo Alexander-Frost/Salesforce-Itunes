@@ -41,7 +41,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
             detailVC.avatarUrl = avatarUrl
             detailVC.director = director
-            detailVC.title = myTitle
+            detailVC.myTitle = myTitle
         }
     }
     
@@ -68,6 +68,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         selectedTitle = searchResult.title
         selectedDirector = searchResult.creator
         selectedAvatarUrl = searchResult.posterUrl
+        performSegue(withIdentifier: "detail segue", sender: self)
     }
     
     // MARK: - Search

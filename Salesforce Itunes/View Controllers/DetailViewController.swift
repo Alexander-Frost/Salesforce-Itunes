@@ -54,10 +54,17 @@ class DetailViewController: UIViewController {
         guard let director = director else {return}
         guard let avatarUrl = avatarUrl else {return}
         
+        // Director Label
         directorLbl.text = director
+        
+        // Title Label
         titleLbl.text = title
+        
+        // Image View
         let myImgUrl = URL(string: avatarUrl) ?? URL(string: "https://www.google.com/favicon.ico")!
         imageView.downloaded(url: myImgUrl)
+        imageView.layer.cornerRadius = 8.0
+        imageView.layer.masksToBounds = true
     }
 
 }
