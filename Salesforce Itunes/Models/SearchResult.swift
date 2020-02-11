@@ -16,8 +16,8 @@ struct SearchResult: Codable {
     // names of the actual keys in the data
     enum CodingKeys: String, CodingKey {
         case title = "trackName"
-        case creator = "artistName"
-        case posterUrl = "previewURL"
+        case creator = "collectionName"
+        case posterUrl = "artworkUrl100"
         
 //        name, director, year, intro, poster
     }
