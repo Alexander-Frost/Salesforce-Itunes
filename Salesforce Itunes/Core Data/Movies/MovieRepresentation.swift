@@ -10,13 +10,13 @@ import Foundation
 
 struct MovieRepresentation: Codable, Equatable {
     
-    // this needs to exactly match our Firebase data
+    // this needs to exactly match our backend data
     var title: String
     var director: String
     var avatarUrl: String
 }
 
-// we need to make sure our Firebase data matches our CoreData data
+// we need to make sure our backend data matches our CoreData data
 
 func == (lhs: MovieRepresentation, rhs: Movies) -> Bool {
     return lhs.title == rhs.title && lhs.director == rhs.director && lhs.avatarUrl == rhs.avatarUrl

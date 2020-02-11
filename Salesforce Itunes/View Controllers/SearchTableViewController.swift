@@ -10,6 +10,12 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
+    // MARK: - Properties
+    
+    var selectedAvatarUrl: String?
+    var selectedTitle: String?
+    var selectedDirector: String?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -26,6 +32,19 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? DetailViewController {
+            
+            guard let avatarUrl = selectedAvatarUrl else {return}
+            guard let myTitle = selectedTitle else {return}
+            guard let director = selectedDirector else {return}
+
+            detailVC.avatarUrl = avatarUrl
+            detailVC.director = director
+            detailVC.title = myTitle
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +61,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         cell.detailTextLabel?.text = searchResult.creator
         
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let searchResult = searchResultsController.searchResults[indexPath.row]
+        selectedTitle = searchResult.title
+        selectedDirector = searchResult.creator
+        selectedAvatarUrl = searchResult.posterUrl
     }
     
     // MARK: - Search

@@ -52,7 +52,7 @@ class MovieController {
         var result: Movies?
         
         do {
-            // 2. Fetch Like from Core Data store
+            // 2. Fetch Movie from Core Data store
             result = try context.fetch(fetchRequest).first
         } catch let fetchError {
             print("Error fetching single Movie: \(fetchError.localizedDescription)")
