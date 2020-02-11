@@ -11,19 +11,38 @@ import XCTest
 
 class Salesforce_ItunesTests: XCTestCase {
 
+    // MARK: - Properties
+    
+    private var searchVC: SearchResultController!
+
+    // MARK: - Lifecycle
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        searchVC = SearchResultController()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    // MARK: - Tests
+    
+    func testAddSearch() {
+        XCTAssertEqual(searchVC.searchResults.count, 0)
+        
+        let result = SearchResult(title: "Avengers", creator: "Marvel", posterUrl: "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg")
+        searchVC.searchResults.append(result)
+        
+        XCTAssertEqual(searchVC.searchResults.count, 1)
     }
+    
+    func testSearchApiEndpoint() {
+        let baseURL = URL(string: "https://itunes.apple.com/search")!
 
+        XCTAssertEqual(searchVC.baseURL, baseURL)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
