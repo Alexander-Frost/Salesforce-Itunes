@@ -10,11 +10,32 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    var myTitle: String?
+    var director: String?
+    var avatarUrl: String?
+    
+    // MARK: - Instances
+    
+    private let movieController = MovieController()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var directorLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    // MARK: - Actions
+    
+    @IBAction func saveBtnPressed(_ sender: UIBarButtonItem) {
+        guard let title = myTitle else {return}
+        guard let director = director else {return}
+        guard let avatarUrl = avatarUrl else {return}
+
+        movieController.create(title: title, director: director, avatarUrl: avatarUrl)
+        navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - VC Lifecycle
     
@@ -22,17 +43,23 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Setup UI
+    
+    private func setupUI(){
+        guard let title = myTitle else {return}
+        guard let director = director else {return}
+        guard let avatarUrl = avatarUrl else {return}
+        
+        directorLbl.text = director
+        titleLbl.text = title
+        
+        // Pass image
+        
+        
     }
-    */
 
 }

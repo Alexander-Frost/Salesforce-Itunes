@@ -124,7 +124,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nx3-gc-ARp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o5u-6t-FhE"/>
+                    <navigationItem key="navigationItem" id="o5u-6t-FhE">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="PgJ-3o-Kz8">
+                            <connections>
+                                <action selector="saveBtnPressed:" destination="4hG-8C-xmK" id="r6u-MG-o29"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="directorLbl" destination="dq5-E1-7xT" id="VKO-IF-FrA"/>
                         <outlet property="imageView" destination="MnD-rD-XfH" id="ODN-nj-b1s"/>
