@@ -56,10 +56,8 @@ class DetailViewController: UIViewController {
         
         directorLbl.text = director
         titleLbl.text = title
-        
-        // Pass image
-        
-        
+        let myImgUrl = URL(string: avatarUrl) ?? URL(string: "https://www.google.com/favicon.ico")!
+        imageView.downloaded(url: myImgUrl)
     }
 
 }

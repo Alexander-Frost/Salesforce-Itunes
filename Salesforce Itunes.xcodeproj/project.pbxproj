@@ -25,6 +25,7 @@
 		FAAA7D8F23F31D340017278E /* MovieRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D8E23F31D340017278E /* MovieRepresentation.swift */; };
 		FAAA7D9223F31D4A0017278E /* Movie+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D9123F31D4A0017278E /* Movie+Convenience.swift */; };
 		FAAA7D9423F31D530017278E /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D9323F31D530017278E /* MovieController.swift */; };
+		FAAA7D9623F324BB0017278E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA7D9523F324BB0017278E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		FAAA7D8E23F31D340017278E /* MovieRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepresentation.swift; sourceTree = "<group>"; };
 		FAAA7D9123F31D4A0017278E /* Movie+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+Convenience.swift"; sourceTree = "<group>"; };
 		FAAA7D9323F31D530017278E /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		FAAA7D9523F324BB0017278E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				FAAA7D4923F309430017278E /* AppDelegate.swift */,
-				FAAA7D8B23F31BB40017278E /* Core Data */,
 				FAAA7D4B23F309430017278E /* SceneDelegate.swift */,
+				FAAA7D9523F324BB0017278E /* Extensions.swift */,
+				FAAA7D8B23F31BB40017278E /* Core Data */,
 				FAAA7D8623F30ADE0017278E /* View Controllers */,
 				FAAA7D8323F309D00017278E /* Model Controllers */,
 				FAAA7D7E23F309770017278E /* Models */,
@@ -342,6 +345,7 @@
 				FAAA7D9423F31D530017278E /* MovieController.swift in Sources */,
 				FAAA7D8023F3098D0017278E /* ResultType.swift in Sources */,
 				FAAA7D4C23F309430017278E /* SceneDelegate.swift in Sources */,
+				FAAA7D9623F324BB0017278E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
